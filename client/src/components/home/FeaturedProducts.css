@@ -1,0 +1,9 @@
+.featured-section {
+  background-color: var(--color-bg);
+}
+
+.view-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
