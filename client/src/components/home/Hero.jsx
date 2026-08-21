@@ -26,7 +26,7 @@ const Hero = () => {
             <Link to="/products">
               <Button variant="primary">Explore Products</Button>
             </Link>
-            <a href={import.meta.env.VITE_N8N_FORM_URL || "#"} target="_blank" rel="noopener noreferrer">
+            <a href="https://lakshya404.app.n8n.cloud/form/db070596-7835-41a0-86a1-7921a35d6058" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="glass-btn">Ask Us a Question</Button>
             </a>
           </div>

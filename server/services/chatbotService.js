@@ -31,7 +31,10 @@ export const sendChatbotMessageToGroq = async ({ message, sessionId }) => {
       max_tokens: 512,
     });
 
-    const botResponse = chatCompletion.choices[0]?.message?.content || "I'm sorry, I couldn't process that.";
+    let botResponse = chatCompletion.choices[0]?.message?.content || "I'm sorry, I couldn't process that.";
+    
+    // Remove <think> blocks if the model outputs them
+    botResponse = botResponse.replace(/<think>[\s\S]*?<\/think>\n*/g, '').trim();
     
     return { response: botResponse };
   } catch (error) {
